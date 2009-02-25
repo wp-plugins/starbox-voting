@@ -3,7 +3,7 @@
 Plugin Name: Starbox Vote
 Plugin URI: http://www.sealedbox.cn/
 Description: A Post Voting Plugins , which use starbox.js
-Version: 1.0
+Version: 1.1
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -21,6 +21,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
+            var $version = "1.1"
 
             /**
              * constructor
@@ -117,10 +118,9 @@ if (!class_exists('Starbox')) {
              */
             function activate() {
 
-
-                    add_option("starbox_image", "");
-                
-                    add_option("starbox_version", "1.1.0");
+                    
+                    add_option("starbox_image", "default.png");
+                    add_option("starbox_version", $this->version);
 
                     global $wpdb ;
 
@@ -145,6 +145,8 @@ if (!class_exists('Starbox')) {
              * @author Administrator (2009-2-7)
              */
             function deactivate() {
+                    delete_option('starbox_image');
+                    delete_option('starbox_version');
                     // do deactivate
             }
 
