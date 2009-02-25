@@ -18,8 +18,8 @@ This plugin adds voting functionality for posts. visitors can vote for the post 
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. You will need to insert the code (`<?php starbox_voting(get_the_ID()); ?>`) into the WordPress loop.
-4. You can also insert the code (`<?php starbox_voting(get_the_ID()); ?>`) into the Post (single.php) or Pages (page.php).
+3. You will need to insert the code (`<?php if(function_exists('starbox_voting')){starbox_voting(get_the_ID());} ?>`) into the WordPress loop.
+4. You can also insert the code (`<?php if(function_exists('starbox_voting')){starbox_voting(get_the_ID());} ?>`) into the Post (single.php) or Pages (page.php).
 5. You can customize the plugin options via the Wordpress Dashboard (`Options > Starbox` in Wordpress versions prior to 2.3, `Settings > Starbox` in Wordpress versions after 2.5)
 
 
