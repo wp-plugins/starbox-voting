@@ -46,6 +46,11 @@ If the plugin cannot write to the database, you can try manually executing the b
                                   `vote` int(11) NOT NULL,
                                   PRIMARY KEY  (`id`)
                                 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+== ChangeLog ==
+
+1.1: Add plugins init setting , set display image as default image.
+
 == Screenshots ==
 
 1. Front Page Display Style
