@@ -22,6 +22,8 @@ The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it
 
 1.2: Repaire ajax Request ,no response .
 
+1.3  Add so Style to choose In `Setting > Starbox`
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
@@ -59,3 +61,5 @@ If the plugin cannot write to the database, you can try manually executing the b
 == Screenshots ==
 
 1. Front Page Display Style
+
+2. Starbox Voting Style

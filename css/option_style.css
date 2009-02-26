@@ -1,0 +1,15 @@
+/* Starbox Setting Style Sheet 
+*/
+.starbox_style li{
+    float:left;
+    width:100%;
+    margin:5px 0;
+}
+
+.starbox_style input{
+    float:left;
+}
+
+.starbox_style span{
+    margin-left:10px;
+}
