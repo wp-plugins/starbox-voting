@@ -16,6 +16,12 @@ This plugin adds voting functionality for posts. visitors can vote for the post 
 The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it works click <a href="http://www.sealedbox.cn/starbox/">Starbox Voting HomePage</a>
 
 
+== ChangeLog ==
+
+1.1: Add plugins init setting , set display image as default image.
+
+1.2: Repaire ajax Request ,no response .
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
@@ -49,9 +55,6 @@ If the plugin cannot write to the database, you can try manually executing the b
                                   PRIMARY KEY  (`id`)
                                 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-== ChangeLog ==
-
-1.1: Add plugins init setting , set display image as default image.
 
 == Screenshots ==
 

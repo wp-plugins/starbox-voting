@@ -3,7 +3,16 @@
 Plugin Name: Starbox Vote
 Plugin URI: http://www.sealedbox.cn/
 Description: A Post Voting Plugins , which use starbox.js
-Version: 1.1
+
+**** Change Log ****
+
+1.1: Add plugins init setting , set display image as default image.
+
+1.2: Repaire ajax Request ,no response .
+
+***************************************************
+
+Version: 1.2
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -21,7 +30,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.1";
+            var $version = "1.2";
 
             /**
              * constructor
