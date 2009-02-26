@@ -17,7 +17,7 @@ function starbox_voting($postid){
                         else
                                 $style .= ",locked: true";
         }
-        echo "new Starbox('starbox_" . $postid . "', " . get_post_star($postid) . ", ".(empty($style) ? "" : "{ ".$style." }") . ");";
+        echo "new Starbox('starbox_" . $postid . "', " . get_post_star($postid).(empty($style) ? "" : ",{ ".$style." }") . ");";
         echo "document.observe('dom:loaded', function() { $('starbox_".$postid."').observe('starbox:rated', function(event) {vote(".$postid.",event.memo.rated,'" . get_option('starbox_image') . "');});});";
         echo "</script>\n";
 }
