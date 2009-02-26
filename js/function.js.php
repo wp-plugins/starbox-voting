@@ -13,10 +13,6 @@ function vote(id,rate,img){
                               method: "post",
                               parameters: "rate=" + rate + "&id=" + id,
                               onSuccess: function(transport) {
-                                if(transport.responseText!="")
-                                {
-                                      new Starbox("starbox_"+id, transport.responseText,{ overlay:img, locked: true, indicator: 'thanks for voting'});
-                                }
                               }
                         });
                 }
