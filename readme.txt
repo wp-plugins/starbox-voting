@@ -10,9 +10,11 @@ This plugin adds voting functionality for posts. visitors can vote for the post 
 
 == Description ==
 
-<p>
+
 This plugin adds voting functionality for posts. visitors can vote for the post and against.
-</p>
+
+The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it works click <a href="http://www.sealedbox.cn/starbox/">Starbox Voting HomePage</a>
+
 
 == Installation ==
 
