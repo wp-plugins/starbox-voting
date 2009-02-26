@@ -14,7 +14,7 @@ You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.2
+Version: 1.3
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -32,7 +32,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.2";
+            var $version = "1.3";
 
             /**
              * constructor
