@@ -10,6 +10,8 @@ Description: A Post Voting Plugins , which use starbox.js
 
 1.2: Repaire ajax Request ,no response .
 
+You can see more information at : http://www.sealedbox.cn/starbox/
+
 ***************************************************
 
 Version: 1.2
