@@ -13,7 +13,7 @@ function option_admin(){
 
           $message = '<div class="updated fade" id="message" style="background-color: rgb(255, 251, 204); margin-top: 40px;"><p>Starbox Setting Updated.</p></div>';
         }
-        $starboxstyle = get_option('starbox_image');
+        $starboxstyle = stripslashes(get_option('starbox_image'));
   ?>
         <div class="wrap">
           <?php $starbox->load_script();?>

@@ -10,7 +10,8 @@
 function starbox_voting($postid){
         echo '<div id="starbox_' . $postid . '"></div>'."\n";
         echo "<script>\n";
-        $style = get_option('starbox_image') ;
+        $style = stripslashes(get_option('starbox_image')) ;
+        
         if(check_voted($postid)){
                         if(empty($style))
                                 $style .= "locked: true";
@@ -18,7 +19,7 @@ function starbox_voting($postid){
                                 $style .= ",locked: true";
         }
         echo "new Starbox('starbox_" . $postid . "', " . get_post_star($postid).(empty($style) ? "" : ",{ ".$style." }") . ");";
-        echo "document.observe('dom:loaded', function() { $('starbox_".$postid."').observe('starbox:rated', function(event) {vote(".$postid.",event.memo.rated,'" . get_option('starbox_image') . "');});});";
+        echo "document.observe('dom:loaded', function() { $('starbox_".$postid."').observe('starbox:rated', function(event) {vote(".$postid.",event.memo.rated,'" . stripslashes(get_option('starbox_image')) . "');});});";
         echo "</script>\n";
 }
 
