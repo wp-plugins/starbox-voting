@@ -10,6 +10,14 @@ Description: A Post Voting Plugins , which use starbox.js
 
 1.2: Repaire ajax Request ,no response .
 
+1.3  Add so Style to choose In `Setting > Starbox`
+
+1.4  You can set style by yourself In `Setting > Starbox`
+
+1.5  Change error: no effect when change style in backend
+     Add ghosing effect when mouse hover the stars
+     Change Style Setting Page style.
+
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
