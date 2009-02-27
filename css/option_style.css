@@ -1,15 +1,26 @@
 /* Starbox Setting Style Sheet 
 */
 .starbox_style li{
-    float:left;
     width:100%;
-    margin:5px 0;
+    margin:10px 0;
 }
-
-.starbox_style input{
-    float:left;
+.starbox_style div, .starbox_style span, .starbox_style input, .starbox_style li{
+    float:left
 }
 
 .starbox_style span{
     margin-left:10px;
+    margin-right:30px;
+    font-size:13px;
+    font-weight:bold;
+    width:100px;
 }
+
+.overlay{
+    width:60px;
+}
+
+.starbox_note{
+    margin-left:20px;
+}
+

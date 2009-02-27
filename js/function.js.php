@@ -6,7 +6,7 @@ $pluginUrl = explode('js',$url);
 
 $ajaxurl =  $pluginUrl[0] . 'ajax.php';
 ?>
-function vote(id,rate,img){
+function vote(id,rate,img,event){
                         var url = "<?php echo $ajaxurl ;?>";
                         
                         new Ajax.Request(url, {
@@ -16,3 +16,11 @@ function vote(id,rate,img){
                               }
                         });
                 }
+
+function starboxThankYou(event) {
+      var indicator = event.findElement('.starbox').down('.indicator'),
+      restore = indicator.innerHTML;
+      indicator.update('Thanks for voting');
+      (function() { indicator.update(restore) }).delay(2);
+}
+

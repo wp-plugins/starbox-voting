@@ -14,7 +14,7 @@ You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.3
+Version: 1.4
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -32,7 +32,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.3";
+            var $version = "1.4";
 
             /**
              * constructor
@@ -143,11 +143,14 @@ if (!class_exists('Starbox')) {
             function activate() {
 
                     
-                    add_option("starbox_image", "");
+                    add_option("starbox_button", "5");
+                    add_option("starbox_overlay", "default.png");
+                    add_option("starbox_class", "default");
                     add_option("starbox_version", $this->version);
 
 
-                    $this->copy_js_script();
+                    if(!$this->copy_js_script())
+                            return false;
 
                     global $wpdb ;
 
@@ -230,7 +233,12 @@ if (!class_exists('Starbox')) {
                     @copy($scriptaculous_floder .'wp-scriptaculous.js.bak',  $scriptaculous_floder . 'wp-scriptaculous.js');
                     @copy($scriptaculous_floder .'effects.js.bak',  $scriptaculous_floder . 'effects.js');
 
-                    delete_option('starbox_image');
+                    if(get_option('starbox_image')){
+                            delete_option('starbox_image');
+                    }
+                    delete_option("starbox_button");
+                    delete_option("starbox_overlay");
+                    delete_option("starbox_class");
                     delete_option('starbox_version');
                     // do deactivate
             }
