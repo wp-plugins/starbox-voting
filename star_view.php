@@ -9,8 +9,8 @@
  */
 function starbox_voting($postid){
         $style = get_starbox_style($postid) ;
-        echo '<div id="starbox_' . $postid . '"><img src="'.STARBOX_URLPATH.'/images/loading.gif'.'"></div>'."\n";
-        echo "<script>\n";
+        echo '<div id="starbox_' . $postid . '"><img src="'.STARBOX_URLPATH.'images/loading.gif'.'" alt="loading" /></div>'."\n";
+        echo "<script language='Javascript' type='text/javascript'>\n";
         echo "new Starbox('starbox_" . $postid . "', " . get_post_star($postid) .  ", { ".$style." });";
         echo "document.observe('dom:loaded', 
                 function() { 
@@ -32,15 +32,15 @@ function starbox_voting($postid){
  */
 function get_starbox_style($postid){
 
-        list($button,$overlay,$class) = explode_style();
+        list($button,$overlay,$class,$ghost) = explode_style();
 
-        $style = "overlay:'".$overlay."',buttons:".$button.",className:'".$class."',";
+        $style = "overlay:'".$overlay."',buttons:".$button.",className:'".$class."',ghosting:".$ghost.",";
 
-        $style = "indicator: '#{average} rating from #{total} votes',";
+        $style .= "indicator: '#{average} rating from #{total} votes',";
 
         $total = "total: ".get_vote_amount($postid);
 
-        $style = check_voted($postid) ? $style . "locked: true," . $total : $style . $total ;
+        $style .= check_voted($postid) ? $style . "locked: true," . $total : $style . $total ;
 
         return $style ;
 
@@ -129,10 +129,11 @@ function check_voted($postid){
  * 
  * @author jigen.he (2009-2-27)
  */
-function implode_style($button,$overlay,$class){
+function implode_style($button,$overlay,$class,$ghost){
         update_option("starbox_button", $button);
         update_option("starbox_overlay", $overlay);
         update_option("starbox_class", $class);
+        update_option("starbox_ghost", $ghost);
 }
 
 /**
@@ -144,8 +145,9 @@ function explode_style(){
         $button = get_option("starbox_button");
         $overlay = get_option("starbox_overlay");
         $class = get_option("starbox_class");
+		$ghost = get_option("starbox_ghost");
 
-        return array($button, $overlay, $class);
+        return array($button, $overlay, $class,$ghost);
 }
 
 ?>

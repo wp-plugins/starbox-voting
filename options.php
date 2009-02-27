@@ -15,11 +15,11 @@ function option_admin(){
 
         if($_POST['starbox_submit']){
 
-          implode_style($_POST['button'], $_POST['overlay'], $_POST['classname']) ;
+          implode_style($_POST['button'], $_POST['overlay'], $_POST['classname'], $_POST['ghost']) ;
 
           $message = '<div class="updated fade" id="message" style="background-color: rgb(255, 251, 204); width:50%;"><p>Starbox Setting Updated.</p></div>';
         }
-        list($button,$overlay,$class) = explode_style();
+        list($button,$overlay,$class,$ghost) = explode_style();
   ?>
         <div class="wrap">
         <h2 id="write-post"><?php _e("Starbox Style Setting&hellip;",'starbox');?></h2>
@@ -69,6 +69,14 @@ function option_admin(){
                 <script>new Starbox('demo_9', 3.5, {overlay:'big.png',buttons:10 });</script>
                 <div style="padding-top:5px;" class="starbox_note"> overlay='big', buttons=10, className='default'</div>
           </li>
+
+		  
+          <li class='star last'>
+                <div id='demo_10' style="float:left"></div></span>
+                <script>new Starbox('demo_10', 3.5, {overlay:'big.png',buttons:10,ghosting: true });</script>
+                <div style="padding-top:5px;" class="starbox_note"> overlay='big', buttons=10, className='default', ghosting=true</div>
+          </li>
+
         </ul>
         <h3 style="float:left">Your Style Setting</h3>
             <ul class="starbox_style">
@@ -83,6 +91,10 @@ function option_admin(){
                     <div class="overlay"><input type="radio" <?php if($class == 'dotted') echo "checked"; ?> name="classname" value="dotted">dotted</div> 
                     <div class="overlay"><input type="radio" <?php if($class == 'pointy') echo "checked"; ?> name="classname" value="pointy">Pointy</div 
                     <div class="overlay"><input type="radio" <?php if($class == 'default') echo "checked"; ?> name="classname" value="default">Default</div</li>
+                <li>
+                <li><span>Ghosting:</span>
+                    <div class="overlay"><input type="radio" <?php if($ghost == 'true') echo "checked"; ?> name="ghost" value="true">true</div> 
+                    <div class="overlay"><input type="radio" <?php if($ghost == 'false') echo "checked"; ?> name="ghost" value="false">false</div 
                 <li>
             </ul>
         <p style="float:left;" class="submit"><input type="submit" value="<?php _e("Update Setting &raquo;",'starbox');?>" name="starbox_submit" /></p>

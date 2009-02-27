@@ -26,6 +26,10 @@ The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it
 
 1.4  You can set style by yourself In `Setting > Starbox`
 
+1.5  Change error: no effect when change style in backend
+     Add ghosing effect when mouse hover the stars
+     Change Style Setting Page style.
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory

@@ -10,15 +10,11 @@ Description: A Post Voting Plugins , which use starbox.js
 
 1.2: Repaire ajax Request ,no response .
 
-1.3  Add so Style to choose In `Setting > Starbox`
-
-1.4  You can set style by yourself In `Setting > Starbox`
-
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.4
+Version: 1.5
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -36,7 +32,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.4";
+            var $version = "1.5";
 
             /**
              * constructor
@@ -150,6 +146,7 @@ if (!class_exists('Starbox')) {
                     add_option("starbox_button", "5");
                     add_option("starbox_overlay", "default.png");
                     add_option("starbox_class", "default");
+                    add_option("starbox_ghost", "false");
                     add_option("starbox_version", $this->version);
 
 
@@ -243,6 +240,7 @@ if (!class_exists('Starbox')) {
                     delete_option("starbox_button");
                     delete_option("starbox_overlay");
                     delete_option("starbox_class");
+                    delete_option("starbox_ghost");
                     delete_option('starbox_version');
                     // do deactivate
             }
