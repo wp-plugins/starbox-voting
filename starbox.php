@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Starbox Vote
+Plugin Name: Starbox Voting
 Plugin URI: http://www.sealedbox.cn/
 Description: A Post Voting Plugins , which use starbox.js
 
@@ -19,11 +19,14 @@ Description: A Post Voting Plugins , which use starbox.js
      Change Style Setting Page style.<br/>
 1.6  Language Support
 
+
+1.7 Rename every function . to avoid with other plugins 
+
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.6
+Version: 1.7
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -41,7 +44,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.6";
+            var $version = "1.7";
 
             /**
              * constructor
@@ -100,7 +103,7 @@ if (!class_exists('Starbox')) {
              */
             function starbox_option(){
                         require_once (dirname (__FILE__) . '/options.php');        
-                        option_admin();
+                        starbox_option_admin();
             }
 
             function load_styles() {

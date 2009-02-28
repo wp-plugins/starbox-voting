@@ -7,7 +7,7 @@
  * 
  * @author jigen.he (2009-2-23)
  */
-function option_admin(){
+function starbox_option_admin(){
 
         global $starbox;
 
@@ -15,11 +15,11 @@ function option_admin(){
 
         if($_POST['starbox_submit']){
 
-          implode_style($_POST['button'], $_POST['overlay'], $_POST['classname'], $_POST['ghost']) ;
+          implode_starbox_style($_POST['button'], $_POST['overlay'], $_POST['classname'], $_POST['ghost']) ;
 
           $message = '<div class="updated fade" id="message" style="background-color: rgb(255, 251, 204); width:50%;"><p>_e("Starbox Setting Updated.",\'starbox\')</p></div>';
         }
-        list($button,$overlay,$class,$ghost) = explode_style();
+        list($button,$overlay,$class,$ghost) = explode_starbox_style();
   ?>
         <div class="wrap">
         <h2 id="write-post"><?php _e("Starbox Style Setting&hellip;",'starbox');?></h2>

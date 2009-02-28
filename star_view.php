@@ -11,7 +11,7 @@ function starbox_voting($postid){
         $style = get_starbox_style($postid) ;
         echo '<div id="starbox_' . $postid . '"><img src="'.STARBOX_URLPATH.'images/loading.gif'.'" alt="loading" /></div>'."\n";
         echo "<script language='Javascript' type='text/javascript'>\n";
-        echo "new Starbox('starbox_" . $postid . "', " . get_post_star($postid) .  ", { ".$style." });";
+        echo "new Starbox('starbox_" . $postid . "', " . get_starbox_post_star($postid) .  ", { ".$style." });";
         echo "document.observe('dom:loaded', 
                 function() { 
                         $('starbox_".$postid."').observe('starbox:rated', 
@@ -32,15 +32,15 @@ function starbox_voting($postid){
  */
 function get_starbox_style($postid){
 
-        list($button,$overlay,$class,$ghost) = explode_style();
+        list($button,$overlay,$class,$ghost) = explode_starbox_style();
 
         $style = "overlay:'".$overlay."',buttons:".$button.",className:'".$class."',ghosting:".$ghost.",";
 
         $style .= "indicator: '#{average} rating from #{total} votes',";
 
-        $total = "total: ".get_vote_amount($postid);
+        $total = "total: ".get_starbox_vote_amount($postid);
 
-        $style .= check_voted($postid) ? $style . "locked: true," . $total : $style . $total ;
+        $style .= check_starbox_voted($postid) ? $style . "locked: true," . $total : $style . $total ;
 
         return $style ;
 
@@ -53,11 +53,11 @@ function get_starbox_style($postid){
  * 
  * @param $postid 
  */
-function get_post_star($postid){
+function get_starbox_post_star($postid){
 
-        $rates = get_total_rate($postid);
+        $rates = get_starbox_total_rate($postid);
 
-        $count = get_vote_amount($postid);
+        $count = get_starbox_vote_amount($postid);
 
         $rate = 0 ;
 
@@ -74,7 +74,7 @@ function get_post_star($postid){
  * 
  * @param $postid 
  */
-function get_total_rate($postid){
+function get_starbox_total_rate($postid){
 
         global $wpdb,$starbox ;
 
@@ -95,7 +95,7 @@ function get_total_rate($postid){
  * 
  * @param $postid 
  */
-function get_vote_amount($postid){
+function get_starbox_vote_amount($postid){
         global $wpdb,$starbox ;
 
         $allvote = $wpdb->get_results("SELECT * FROM " . $starbox->table . " where object_id = ".$postid);
@@ -109,7 +109,7 @@ function get_vote_amount($postid){
  * 
  * @author jigen.he (2009-2-23)
  */
-function check_voted($postid){
+function check_starbox_voted($postid){
         global $wpdb,$starbox ;
 
         $ip = $_SERVER['REMOTE_ADDR'] ;
@@ -129,7 +129,7 @@ function check_voted($postid){
  * 
  * @author jigen.he (2009-2-27)
  */
-function implode_style($button,$overlay,$class,$ghost){
+function implode_starbox_style($button,$overlay,$class,$ghost){
         update_option("starbox_button", $button);
         update_option("starbox_overlay", $overlay);
         update_option("starbox_class", $class);
@@ -141,11 +141,11 @@ function implode_style($button,$overlay,$class,$ghost){
  * 
  * @author jigen.he (2009-2-27)
  */
-function explode_style(){
+function explode_starbox_style(){
         $button = get_option("starbox_button");
         $overlay = get_option("starbox_overlay");
         $class = get_option("starbox_class");
-		$ghost = get_option("starbox_ghost");
+        $ghost = get_option("starbox_ghost");
 
         return array($button, $overlay, $class,$ghost);
 }

@@ -15,9 +15,9 @@ This plugin adds voting functionality for posts. visitors can vote for the post 
 
 The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it works click <a href="http://www.sealedbox.cn/starbox/">Starbox Voting HomePage</a>
 
-Now there are English And Chinese Language Package,If you like this plugin , and translate it to other language, please <a href="http://www.sealedbox.cn/starbox/">let me konw</a>. 
+If you like this plugin , and translate it to other language , please <a href="http://www.sealedbox.cn/starbox/">let me know</a>
 
-<h4>Change Log</h4>
+<b>Change Log</b>
 
 1.1: Add plugins init setting , set display image as default image.
 
@@ -27,11 +27,13 @@ Now there are English And Chinese Language Package,If you like this plugin , and
 
 1.4  You can set style by yourself In `Setting > Starbox`
 
-1.5  Change error: no effect when change style in backend<br />
-     Add ghosing effect when mouse hover the stars<br />
-     Change Style Setting Page style.<br />
+1.5  Change error: no effect when change style in backend 
+     Add ghosing effect when mouse hover the stars
+     Change Style Setting Page style.
 
-1.6  Language Support
+1.6 Add Language Package 
+
+1.7 Rename every function . to avoid with other plugins 
 
 == Installation ==
 
