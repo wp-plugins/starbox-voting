@@ -1,4 +1,4 @@
-﻿=== wp-starbox ===
+﻿=== Starbox Voting ===
 Contributors: jigen.he
 Tags: popularity, voting, Post
 Donate link:
