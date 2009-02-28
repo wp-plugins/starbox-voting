@@ -15,7 +15,7 @@ This plugin adds voting functionality for posts. visitors can vote for the post 
 
 The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it works click <a href="http://www.sealedbox.cn/starbox/">Starbox Voting HomePage</a>
 
-Now there are English And Chinese Language ,If you like this plugin , and translate it to another language, please <a href="http://www.sealedbox.cn/starbox/">let me konw</a>. 
+Now there are English And Chinese Language Package,If you like this plugin , and translate it to other language, please <a href="http://www.sealedbox.cn/starbox/">let me konw</a>. 
 
 <h4>Change Log</h4>
 
