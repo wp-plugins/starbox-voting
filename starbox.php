@@ -17,7 +17,8 @@ Description: A Post Voting Plugins , which use starbox.js
 1.5  Change error: no effect when change style in backend<br/>
      Add ghosing effect when mouse hover the stars<br/>
      Change Style Setting Page style.<br/>
-1.6  Language Support
+
+1.6  Add Language Package
 
 
 1.7 Rename every function . to avoid with other plugins 
