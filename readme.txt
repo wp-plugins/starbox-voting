@@ -17,7 +17,7 @@ The Plugin HomePage on right is wrong , i' sorry to that, and you can see how it
 
 If you like this plugin , and translate it , please <a href="http://www.sealedbox.cn/starbox/">let me konw</a>. 
 
-<b>Change Log</b>
+<h4>Change Log</h4>
 
 1.1: Add plugins init setting , set display image as default image.
 
