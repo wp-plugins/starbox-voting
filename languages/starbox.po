@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Starbox Voting\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-28 13:45+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: jigenhe <again.0120@hotmail.com>\n"
+"Language-Team: jigenhe <again.0120@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: E:\\s\\wp-content\\plugins\\starbox-voting\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: options.php:25
+msgid "Starbox Style Setting&hellip;"
+msgstr ""
+
+#: options.php:45
+msgid "Example Style Setting"
+msgstr ""
+
+#: options.php:81
+msgid "Your Style Setting"
+msgstr ""
+
+#: options.php:88
+msgid "Amount of clickable areas,5 or 10"
+msgstr ""
+
+#: options.php:100
+msgid "Update Setting &raquo;"
+msgstr ""
+
+#: starbox.php:34
+msgid "You are not allowed to call this page directly."
+msgstr ""
+
+#: starbox.php:185
+#: starbox.php:189
+msgid "Sorry, Please Change The Folder "
+msgstr ""
+
+#: starbox.php:185
+#: starbox.php:189
+msgid " writeable!"
+msgstr ""
+
+#: starbox.php:197
+#: starbox.php:202
+#: starbox.php:207
+msgid "Sorry, Can't Backup  "
+msgstr ""
+
+#: starbox.php:217
+msgid "Sorry, Can't Copy  "
+msgstr ""
+
+#: starbox.php:217
+#: starbox.php:221
+#: starbox.php:225
+msgid "to"
+msgstr ""
+
+#: starbox.php:221
+#: starbox.php:225
+msgid "Sorry, Can't Copy  starbox"
+msgstr ""
+

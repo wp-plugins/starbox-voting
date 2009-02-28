@@ -14,15 +14,16 @@ Description: A Post Voting Plugins , which use starbox.js
 
 1.4  You can set style by yourself In `Setting > Starbox`
 
-1.5  Change error: no effect when change style in backend
-     Add ghosing effect when mouse hover the stars
-     Change Style Setting Page style.
+1.5  Change error: no effect when change style in backend<br/>
+     Add ghosing effect when mouse hover the stars<br/>
+     Change Style Setting Page style.<br/>
+1.6  Language Support
 
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.5
+Version: 1.6
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -31,7 +32,7 @@ Author URI: http://www.sealedbox.cn/
 
 
 // Stop direct call
-if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You are not allowed to call this page directly.'); }
+if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die(_e('You are not allowed to call this page directly.')); }
 
 if (!class_exists('Starbox')) {
 
@@ -40,7 +41,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.5";
+            var $version = "1.6";
 
             /**
              * constructor
@@ -88,7 +89,7 @@ if (!class_exists('Starbox')) {
              */
             function add_option_page(){
                         if (function_exists('add_options_page')) {
-                                    add_options_page(__('Starbox', 'starbox'), __('Starbox', 'starbox'), 10 , "starbox" ,array(&$this,'starbox_option')) ;
+                                    add_options_page('Starbox', 'Starbox', 10 , "starbox" ,array(&$this,'starbox_option')) ;
                         }
             }
 
@@ -182,11 +183,11 @@ if (!class_exists('Starbox')) {
                     $prototype_folder = ABSPATH . 'wp-includes\js/' ;
                     $scriptaculous_floder = $prototype_folder . 'scriptaculous/' ;
                     if(!is_writable($prototype_folder)){
-                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Please Change The Folder '.$prototype_folder.' writeable!', "starbox" ) . '</strong></p></div>';
+                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Please Change The Folder ','starbox').$prototype_folder.__(' writeable!','starbox'). '</strong></p></div>';
                             return false;
                     }
                     if(!is_writable($scriptaculous_floder)){
-                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Please Change The Folder '.$scriptaculous_floder.' writeable!', "starbox" ) . '</strong></p></div>';
+                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Please Change The Folder ','starbox').$scriptaculous_floder.__(' writeable!','starbox') . '</strong></p></div>';
                             return false;
                     }
                     /*
@@ -194,17 +195,17 @@ if (!class_exists('Starbox')) {
                     */
                     if(!file_exists( $prototype_folder . 'prototype.js.bak')){
                             if(!@copy($prototype_folder . 'prototype.js' , $prototype_folder . 'prototype.js.bak')){
-                                    echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Backup  '.$prototype_folder.'prototype.js!', "starbox" ) . '</strong></p></div>';
+                                    echo '<div id="message" class="error"><p><strong>' . __("Sorry, Can't Backup  ",'starbox').$prototype_folder."prototype.js!</strong></p></div>";
                                     return false;
                             }
                     }if(!file_exists($scriptaculous_floder . 'wp-scriptaculous.js.bak')){
                             if(!@copy($scriptaculous_floder .'wp-scriptaculous.js',  $scriptaculous_floder . 'wp-scriptaculous.js.bak')){
-                                    echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Backup  '.$scriptaculous_floder.'scriptaculous.js!', "starbox" ) . '</strong></p></div>';
+                                    echo '<div id="message" class="error"><p><strong>' . __("Sorry, Can't Backup  ",'starbox').$scriptaculous_floder.'scriptaculous.js!</strong></p></div>';
                                     return false;
                             }
                     }if(!file_exists($scriptaculous_floder . 'effects.js.bak')){
                             if(!@copy($scriptaculous_floder .'effects.js',  $scriptaculous_floder . 'effects.js.bak')){
-                                    echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Backup  '.$scriptaculous_floder.'effects.js!', "starbox" ) . '</strong></p></div>';
+                                    echo '<div id="message" class="error"><p><strong>' .__("Sorry, Can't Backup  ",'starbox').$scriptaculous_floder.'effects.js!</strong></p></div>';
                                     return false;
                             }
                     }
@@ -214,15 +215,15 @@ if (!class_exists('Starbox')) {
                     */
 
                     if(!@copy(STARBOX_URLPATH .'js/prototype.js',  $prototype_folder . 'prototype.js')){
-                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Copy  '.STARBOX_URLPATH.'js/prototype.js to '.$prototype_folder.'prototype.js!', "starbox" ) . '</strong></p></div>';
+                            echo '<div id="message" class="error"><p><strong>' . __("Sorry, Can't Copy  ",'starbox').STARBOX_URLPATH.'js/prototype.js '.__('to','starbox') .$prototype_folder.'prototype.js!</strong></p></div>';
                             return false;
                     }
                     if(!@copy(STARBOX_URLPATH .'js/scriptaculous.js',  $scriptaculous_floder . 'wp-scriptaculous.js')){
-                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Copy  '.STARBOX_URLPATH.'js/scriptaculous.js to '.$scriptaculous_floder.'wp-scriptaculous.js!', "starbox" ) . '</strong></p></div>';
+                            echo '<div id="message" class="error"><p><strong>' . __("Sorry, Can't Copy  ",'starbox').STARBOX_URLPATH.'js/scriptaculous.js '. __('to','starbox') .$scriptaculous_floder.'wp-scriptaculous.js!</strong></p></div>';
                             return false;
                     }
                     if(!@copy(STARBOX_URLPATH .'js/effects.js',  $scriptaculous_floder . 'effects.js')){
-                            echo '<div id="message" class="error"><p><strong>' . __('Sorry, Can\'t Copy  '.STARBOX_URLPATH.'js/effects.js to '.$scriptaculous_floder.'effects.js!', "starbox" ) . '</strong></p></div>';
+                            echo '<div id="message" class="error"><p><strong>' . __("Sorry, Can't Copy  ",'starbox').STARBOX_URLPATH.'js/effects.js '.__('to','starbox') .$scriptaculous_floder.'effects.js!</strong></p></div>';
                             return false;
                     }
 
