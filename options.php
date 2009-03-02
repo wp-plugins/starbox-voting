@@ -17,7 +17,7 @@ function starbox_option_admin(){
 
           implode_starbox_style($_POST['button'], $_POST['overlay'], $_POST['classname'], $_POST['ghost']) ;
 
-          $message = '<div class="updated fade" id="message" style="background-color: rgb(255, 251, 204); width:50%;"><p>_e("Starbox Setting Updated.",\'starbox\')</p></div>';
+          $message = 1;
         }
         list($button,$overlay,$class,$ghost) = explode_starbox_style();
   ?>
@@ -38,9 +38,8 @@ function starbox_option_admin(){
           <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"><br />
           </form>
         </div>
-          <?php if($message)
-                echo $message ;
-              ?>
+          <?php if($message){ ?>
+                <div class="updated fade" id="message" style="background-color: rgb(255, 251, 204); width:50%;"><p><?php _e("Starbox Setting Updated.",'starbox') ?></p></div>             <? } ?>
         <form method="post" action="">
             <h3 style="float:left"><?php _e('Example Style Setting','starbox') ?></h3>
         <ul class="starbox_style">    
