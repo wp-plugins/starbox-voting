@@ -35,6 +35,8 @@ If you like this plugin , and translate it to other language , please <a href="h
 
 1.7 Rename every function . to avoid with other plugins 
 
+1.8 Compatible with Windows And Linux
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
