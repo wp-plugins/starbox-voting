@@ -28,7 +28,7 @@ You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 1.8
+Version: 2.0.1
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -46,7 +46,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "1.8";
+            var $version = "2.0.1";
 
 
             /**

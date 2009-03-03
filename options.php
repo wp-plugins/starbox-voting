@@ -46,54 +46,54 @@ function starbox_option_admin(){
           <li class='star last'>
                 <div id='demo_0' style="float:left"><img src="<?php echo STARBOX_URLPATH.'/images/loading.gif';?>"></div></span>
                 <script>new Starbox('demo_0', 2);</script>
-                <div class="starbox_note"> overlay='default', buttons=5, className='default'</div>
+                <div class="starbox_note"> <?php _e("overlay='default', buttons=5, className='default'",'starbox') ?></div>
           </li>
           <li class='star last'>
                  <div id='demo_1' style="float:left"><img src="<?php echo STARBOX_URLPATH.'/images/loading.gif';?>"></div></span>
                  <script>new Starbox('demo_1', 2, { className: 'dotted' });</script>
-            <div class="starbox_note"> overlay='default', buttons=5, className='dotted'</div>
+            <div class="starbox_note"> <?php _e("overlay='default', buttons=5, className='dotted'",'starbox') ?></div>
           </li>
           <li class='star last'>
                 <div id='demo_2' style="float:left"><img src="<?php echo STARBOX_URLPATH.'/images/loading.gif';?>"></div></span>
                 <script language='javascript' type='text/javascript'>new Starbox('demo_2', 2.5, { className: 'dotted', buttons: 10});</script>
-            <div class="starbox_note"> overlay='default', buttons=10, className='dotted'</div>
+            <div class="starbox_note"> <?php _e("overlay='default', buttons=10, className='dotted'",'starbox') ?></div>
           </li>
           <li class='star last'>
                 <div id='demo_4' style="float:left"><img src="<?php echo STARBOX_URLPATH.'/images/loading.gif';?>"></div></span>
                 <script>new Starbox('demo_4', 3, { overlay: 'pointy.png', className: 'pointy' } );</script>
-                <div class="starbox_note"> overlay='pointy', buttons=5, className='default'</div>
+                <div class="starbox_note"> <?php _e("overlay='pointy', buttons=5, className='default'",'starbox') ?></div>
           </li>
           <li class='star last'>
                 <div id='demo_9' style="float:left"></div></span>
                 <script>new Starbox('demo_9', 3.5, {overlay:'big.png',buttons:10 });</script>
-                <div style="padding-top:5px;" class="starbox_note"> overlay='big', buttons=10, className='default'</div>
+                <div style="padding-top:5px;" class="starbox_note"> <?php _e("overlay='Big', buttons=10, className='Default'",'starbox') ?></div>
           </li>
 
           
           <li class='star last'>
                 <div id='demo_10' style="float:left"></div></span>
                 <script>new Starbox('demo_10', 3.5, {overlay:'big.png',buttons:10,ghosting: true });</script>
-                <div style="padding-top:5px;" class="starbox_note"> overlay='big', buttons=10, className='default', ghosting=true</div>
+                <div style="padding-top:5px;" class="starbox_note"> <?php _e("overlay='Big', buttons=10, className='Default', ghosting=Yes",'starbox') ?></div>
           </li>
 
         </ul>
         <h3 style="float:left"><?php _e('Your Style Setting','starbox') ?></h3>
             <ul class="starbox_style">
-                <li><span>Overlay:</span>
-                    <div class="overlay"><input type="radio" <?php if($overlay == 'big.png') echo "checked"; ?> name="overlay" value="big.png">Big</div> 
-                    <div class="overlay"><input type="radio" <?php if($overlay == 'pointy.png') echo "checked"; ?> name="overlay" value="pointy.png">Pointy</div 
-                    <div class="overlay"><input type="radio" <?php if($overlay == 'default.png') echo "checked"; ?> name="overlay" value="default.png">Default</div</li>
+                <li><span><?php _e('Overlay',"starbox") ?>:</span>
+                    <div class="overlay"><input type="radio" <?php if($overlay == 'big.png') echo "checked"; ?> name="overlay" value="big.png"><?php _e('Big',"starbox") ?></div> 
+                    <div class="overlay"><input type="radio" <?php if($overlay == 'pointy.png') echo "checked"; ?> name="overlay" value="pointy.png"><?php _e('Pointy',"starbox") ?></div 
+                    <div class="overlay"><input type="radio" <?php if($overlay == 'default.png') echo "checked"; ?> name="overlay" value="default.png"><?php _e('Default',"starbox") ?></div</li>
                 <li>
-                    <span>Buttons:</span><input style="text"  name="button" value="<?php echo $button;?>" /><div  style="padding-top:5px;" class="starbox_note">)<?php _e('Amount of clickable areas,5 or 10','starbox') ?>)</div>
+                    <span><?php _e('Buttons',"starbox") ?>:</span><input style="text"  name="button" value="<?php echo $button;?>" /><div  style="padding-top:5px;" class="starbox_note">(<?php _e('Amount of clickable areas,5 or 10','starbox') ?>)</div>
                 </li>
-                <li><span>ClassName:</span>
-                    <div class="overlay"><input type="radio" <?php if($class == 'dotted') echo "checked"; ?> name="classname" value="dotted">dotted</div> 
-                    <div class="overlay"><input type="radio" <?php if($class == 'pointy') echo "checked"; ?> name="classname" value="pointy">Pointy</div 
-                    <div class="overlay"><input type="radio" <?php if($class == 'default') echo "checked"; ?> name="classname" value="default">Default</div</li>
+                <li><span><?php _e('ClassName',"starbox") ?>:</span>
+                    <div class="overlay"><input type="radio" <?php if($class == 'dotted') echo "checked"; ?> name="classname" value="dotted"><?php _e('dotted',"starbox") ?></div> 
+                    <div class="overlay"><input type="radio" <?php if($class == 'pointy') echo "checked"; ?> name="classname" value="pointy"><?php _e('Pointy',"starbox") ?></div 
+                    <div class="overlay"><input type="radio" <?php if($class == 'default') echo "checked"; ?> name="classname" value="default"><?php _e('Default',"starbox") ?></div</li>
                 <li>
-                <li><span>Ghosting:</span>
-                    <div class="overlay"><input type="radio" <?php if($ghost == 'true') echo "checked"; ?> name="ghost" value="true">true</div> 
-                    <div class="overlay"><input type="radio" <?php if($ghost == 'false') echo "checked"; ?> name="ghost" value="false">false</div 
+                <li><span><?php _e('Ghosting',"starbox") ?>:</span>
+                    <div class="overlay"><input type="radio" <?php if($ghost == 'true') echo "checked"; ?> name="ghost" value="true"><?php _e('Yes',"starbox") ?></div> 
+                    <div class="overlay"><input type="radio" <?php if($ghost == 'false') echo "checked"; ?> name="ghost" value="false"><?php _e('No',"starbox") ?></div 
                 <li>
             </ul>
         <p style="float:left;" class="submit"><input type="submit" value="<?php _e("Update Setting &raquo;",'starbox');?>" name="starbox_submit" /></p>
