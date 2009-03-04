@@ -24,11 +24,13 @@ Description: A Post Voting Plugins , which use starbox.js
 
 1.8 Compatible with Windows And Linux 
 
+2.0.2 Fix database create table only have 'wp_' prefix .
+
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 2.0.1
+Version: 2.0.2
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -46,7 +48,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "2.0.1";
+            var $version = "2.0.2";
 
 
             /**
@@ -178,7 +180,7 @@ if (!class_exists('Starbox')) {
                     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
                     // do activate
                     if($wpdb->get_var("show tables like '$this->table'") != $this->table){
-                            $q = "CREATE TABLE `wp_starboxvoting` (
+                            $q = "CREATE TABLE `".$this->table."` (
                                   `id` int(11) NOT NULL auto_increment,
                                   `object_id` int(11) NOT NULL,
                                   `ip` varchar(64) character set latin1 NOT NULL,

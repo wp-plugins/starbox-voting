@@ -37,6 +37,8 @@ If you like this plugin , and translate it to other language , please <a href="h
 
 1.8 Compatible with Windows And Linux
 
+2.0.2 Fix database create table only have 'wp_' prefix .
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
