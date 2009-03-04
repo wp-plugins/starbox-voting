@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Starbox Voting\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-03 09:41+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: musky00 <contact@themes-du.net>\n"
+"Language-Team: Themes du Net <contact@themes-du.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: E:\\s\\wp-content\\plugins\\starbox-voting\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: options.php:25
+msgid "Starbox Style Setting&hellip;"
+msgstr "Configuration des styles Starbox&hellip;"
+
+#: options.php:42
+msgid "Starbox Setting Updated."
+msgstr "Paramètres Starbox mis à jour"
+
+#: options.php:44
+msgid "Example Style Setting"
+msgstr "Exemples de styles"
+
+#: options.php:49
+msgid "overlay='default', buttons=5, className='default'"
+msgstr "Fond='Défaut', boutons=5, classe='Défaut'"
+
+#: options.php:54
+msgid "overlay='default', buttons=5, className='dotted'"
+msgstr "Fond='Défaut', boutons=5, classe='Pointillé'"
+
+#: options.php:59
+msgid "overlay='default', buttons=10, className='dotted'"
+msgstr "Fond='Défaut', boutons=10, classe='Pointillé'"
+
+#: options.php:64
+msgid "overlay='pointy', buttons=5, className='default'"
+msgstr "Fond='Moyen', boutons=5, classe='Défaut'"
+
+#: options.php:69
+msgid "overlay='Big', buttons=10, className='Default'"
+msgstr "Fond='Grand', boutons=10, classe='Défaut'"
+
+#: options.php:76
+msgid "overlay='Big', buttons=10, className='Default', ghosting=Yes"
+msgstr "Fond='Grand', boutons=10, classe='Défaut', Cache=Oui"
+
+#: options.php:80
+msgid "Your Style Setting"
+msgstr "Votre configuration"
+
+#: options.php:82
+msgid "Overlay"
+msgstr "Fond"
+
+#: options.php:83
+msgid "Big"
+msgstr "Grand"
+
+#: options.php:84
+#: options.php:91
+msgid "Pointy"
+msgstr "Moyen"
+
+#: options.php:85
+#: options.php:92
+msgid "Default"
+msgstr "Défaut"
+
+#: options.php:87
+msgid "Buttons"
+msgstr "Boutons"
+
+#: options.php:87
+msgid "Amount of clickable areas,5 or 10"
+msgstr "Nombre de zones cliquables, 5 ou 10"
+
+#: options.php:89
+msgid "ClassName"
+msgstr "Classe"
+
+#: options.php:90
+msgid "dotted"
+msgstr "Pointillé"
+
+#: options.php:94
+msgid "Ghosting"
+msgstr "Cache"
+
+#: options.php:95
+msgid "Yes"
+msgstr "Oui"
+
+#: options.php:96
+msgid "No"
+msgstr "Non"
+
+#: options.php:99
+msgid "Update Setting &raquo;"
+msgstr "Mettre à jour les paramètres &raquo;"
+
+#: starbox.php:40
+msgid "You are not allowed to call this page directly."
+msgstr "Vous n'êtes pas autorisé à appeler cette page directement"
+
