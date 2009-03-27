@@ -26,11 +26,13 @@ Description: A Post Voting Plugins , which use starbox.js
 
 2.0.2 Fix database create table only have 'wp_' prefix .
 
+2.0.3 Clear code.
+
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 2.0.2
+Version: 2.0.3
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -48,7 +50,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "2.0.2";
+            var $version = "2.0.3";
 
 
             /**
