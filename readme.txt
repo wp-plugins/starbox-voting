@@ -39,6 +39,10 @@ If you like this plugin , and translate it to other language , please <a href="h
 
 2.0.2 Fix database create table only have 'wp_' prefix .
 
+2.0.3 Clear code.
+
+2.0.4 Fix Ie8 Bug:add this right after <head> : <meta http-equiv=”X-UA-Compatible” content=”IE=EmulateIE7″ />
+
 == Installation ==
 
 1. Upload the folder `starbox` to the `/wp-content/plugins/` directory
@@ -46,7 +50,7 @@ If you like this plugin , and translate it to other language , please <a href="h
 3. You will need to insert the code (`<?php if(function_exists('starbox_voting')){starbox_voting(get_the_ID());} ?>`) into the WordPress loop.
 4. You can also insert the code (`<?php if(function_exists('starbox_voting')){starbox_voting(get_the_ID());} ?>`) into the Post (single.php) or Pages (page.php).
 5. You can customize the plugin options via the Wordpress Dashboard (`Options > Starbox` in Wordpress versions prior to 2.3, `Settings > Starbox` in Wordpress versions after 2.5)
-
+6. If You want starbox work in ie8 , please add this right after<head>: `<meta http-equiv=”X-UA-Compatible” content=”IE=EmulateIE7″ />`
 
 == Requirements ==
 

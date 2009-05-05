@@ -28,11 +28,13 @@ Description: A Post Voting Plugins , which use starbox.js
 
 2.0.3 Clear code.
 
+2.0.4 Fix Ie8 Bug:add this right after <head> : <meta http-equiv=¡±X-UA-Compatible¡± content=¡±IE=EmulateIE7¡å />
+
 You can see more information at : http://www.sealedbox.cn/starbox/
 
 ***************************************************
 
-Version: 2.0.3
+Version: 2.0.4
 Author: jigen.he
 Author URI: http://www.sealedbox.cn/
 
@@ -50,7 +52,7 @@ if (!class_exists('Starbox')) {
 
 
             var $table = "" ;
-            var $version = "2.0.3";
+            var $version = "2.0.4";
 
 
             /**
